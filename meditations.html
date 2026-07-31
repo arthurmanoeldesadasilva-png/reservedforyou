@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>meditações</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="pixel-stars"></div>
+  <header class="site-header">
+  <nav class="nav">
+    <a class="logo" href="index.html" data-i18n="logo">espaço da Júlia</a>
+    <div class="nav-links">
+      <a href="index.html"  data-i18n="navHome">início</a>
+      <a href="meditations.html" class="active" data-i18n="navMeditations">meditações</a>
+      <a href="affirmations.html"  data-i18n="navAffirmations">afirmações</a>
+      <a href="games.html"  data-i18n="navGames">jogos</a>
+    </div>
+    <div class="lang-wrap">
+      <label for="langSelect" data-i18n="langLabel">idioma</label>
+      <select id="langSelect" aria-label="seletor de idioma">
+        <option value="en">english</option>
+        <option value="pt">português</option>      
+      </select>
+      <label for="soundSelect" data-i18n="soundLabel">som</label>
+      <select id="soundSelect" class="sound-select" aria-label="tipo de som ambiente">
+        <option value="ambient" data-i18n="soundAmbient">Mafia</option>
+        <option value="rain" data-i18n="soundRain">Tranquilo Demais! 😶‍🌫️</option>
+        <option value="fire" data-i18n="soundFire">Sei lá</option>
+        <option value="wind" data-i18n="soundWind">You are Amazing</option>
+        <option value="trees" data-i18n="soundTrees">Júlia?!!🤨</option>
+      </select>
+      <button id="audioToggle" class="audio-btn" type="button" data-i18n="audioToggleOff">som ambiente desligado</button>
+    </div>
+  </nav>
+</header>
+  <main>
+    <section class="hero">
+      <h1 data-i18n="medTitle">meditações</h1>
+      <p data-i18n="medSubtitle">toque em reproduzir para assistir dentro desta página.</p>
+      <div class="kitty-strip" aria-hidden="true">
+       <div>
+          <p data-i18n="name1">Júlia</p>
+          <p>↓</p>
+          <img src="assets/pixel-kitty-1.svg" alt="gatinha de pixel com laço">
+        </div>
+        <div>
+          <p data-i18n="name2">Victor</p>
+          <p>↓</p>
+          <img src="assets/pixel-kitty-2.svg" alt="amiga gatinha de pixel">
+        </div>
+      </div>
+    </section>
+    <section class="breathing-widget hero">
+      <h2 data-i18n="breathTitle">widget de respiração</h2>
+      <p data-i18n="breathText">siga a bolha e respire devagar.</p>
+      <div class="breath-visual" id="breathBubble"></div>
+      <div class="breath-meta">
+        <p id="breathPhase" data-i18n="breathReady">pronto</p>
+        <p id="breathCount"></p>
+      </div>
+      <button class="tiny-btn" id="breathToggle" type="button" data-i18n="breathStart">começar a respirar</button>
+    </section>
+    <section id="meditationCards" class="cards"></section>
+  </main>
+  <footer class="footer" data-i18n="footer">feito com muito amor e pixels rosas.</footer>
+  <script src="app.js"></script>
+</body>
+</html>

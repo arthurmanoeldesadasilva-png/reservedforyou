@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jogos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="pixel-stars"></div>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="index.html" data-i18n="logo">espaço da Júlia</a>
+      <div class="nav-links">
+        <a href="index.html" data-i18n="navHome">início</a>
+        <a href="meditations.html" data-i18n="navMeditations">meditações</a>
+        <a href="affirmations.html" data-i18n="navAffirmations">afirmações</a>
+        <a href="games.html" class="active" data-i18n="navGames">jogos</a>
+      </div>
+      <div class="lang-wrap">
+        <label for="langSelect" data-i18n="langLabel">idioma</label>
+        <select id="langSelect" aria-label="seletor de idioma">
+          <option value="en">english</option>
+          <option value="pt">português</option>
+        </select>
+        <label for="soundSelect" data-i18n="soundLabel">som</label>
+        <select id="soundSelect" class="sound-select" aria-label="tipo de som ambiente">
+          <option value="ambient" data-i18n="soundAmbient">Mafia</option>
+          <option value="rain" data-i18n="soundRain">Tranquilo Demais! 😶‍🌫️</option>
+          <option value="fire" data-i18n="soundFire">Sei lá</option>
+          <option value="wind" data-i18n="soundWind">You are Amazing</option>
+          <option value="trees" data-i18n="soundTrees">Júlia?!!🤨</option>
+        </select>
+        <button id="audioToggle" class="audio-btn" type="button" data-i18n="audioToggleOff">som desligado</button>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <h1 data-i18n="gamesTitle">jogos</h1>
+      <p data-i18n="gamesSubtitle">diversão simples em pixel art.</p>
+      <div class="kitty-strip" aria-hidden="true">
+        <div>
+          <p data-i18n="name1">Júlia</p>
+          <p>↓</p>
+          <img src="assets/pixel-kitty-1.svg" alt="gatinha de pixel com laço">
+        </div>
+        <div>
+          <p data-i18n="name2">Victor</p>
+          <p>↓</p>
+          <img src="assets/pixel-kitty-2.svg" alt="amiga gatinha de pixel">
+        </div>
+
+      </div>
+    </section>
+
+    <section class="games-grid">
+      <article class="game-box">
+        <h2 data-i18n="game7Title">corrida da gatinha</h2>
+        <p data-i18n="game7Text">pule sobre os obstáculos de laço.</p>
+        <div class="runner-track" id="runnerTrack">
+          <img class="runner-kitty" id="runnerKitty" src="assets/pixel-kitty-runner.svg"
+            alt="gatinha hello kitty corredor de pixel">
+          <img class="runner-obstacle" id="runnerObstacle" src="assets/pixel-bow.svg" alt="obstáculo de laço em pixel">
+        </div>
+        <div class="inline-row">
+          <button class="tiny-btn" id="runnerStart" type="button" data-i18n="game7Start">iniciar corrida</button>
+          <button class="tiny-btn" id="runnerJump" type="button" data-i18n="game7Jump">pular</button>
+        </div>
+        <p><span data-i18n="game7Score">distância</span>: <span id="runnerScore">0</span></p>
+        <p id="runnerStatus" data-i18n="game7StatusReady">pronto para correr</p>
+      </article>
+
+      <article class="game-box">
+        <h2 data-i18n="game8Title">estourar pétalas</h2>
+        <p data-i18n="game8Text">estoure as pétalas antes que o tempo acabe.</p>
+        <button class="tiny-btn" id="petalStart" type="button" data-i18n="game8Start">iniciar pétalas</button>
+        <p><span data-i18n="game8Score">pétalas</span>: <span id="petalScore">0</span></p>
+        <p><span data-i18n="game8Time">tempo</span>: <span id="petalTime">12</span></p>
+        <div class="petal-box" id="petalBox"></div>
+      </article>
+
+      <article class="game-box">
+        <h2 data-i18n="game2Title">jogo da memória da gatinha</h2>
+        <p data-i18n="game2Text">encontre todos os pares correspondentes.</p>
+        <button class="tiny-btn" id="resetKitty" type="button" data-i18n="game2Reset">reiniciar</button>
+        <p><span data-i18n="game2Moves">movimentos</span>: <span id="kittyMoves">0</span></p>
+        <p id="kittyWon" data-i18n="game2Won" hidden>você conseguiu.</p>
+        <div class="kitty-board" id="kittyBoard"></div>
+      </article>
+
+      <article class="game-box">
+        <h2 data-i18n="game4Title">pedra, papel e tesoura</h2>
+        <p data-i18n="game4Text">escolha uma opção e jogue contra a gatinha.</p>s=
+        <div class="rps-wrap">
+          <div clas"rps-kitty">
+            <img id="rpsKitty" src="assets/pixel-kitty-runner.svg" alt="gatinha de pixel para jankenpon">
+          </div>
+          <div class="rps-hand">
+            <img id="rpsHand" src="assets/pixel-hand-idle.svg" alt="mão branca em pixel">
+          </div>
+        </div>
+        <p id="rpsKittyMood" data-i18n="game4KittyReady">a gatinha está pronta</p>
+        <div class="inline-row">
+          <button class="tiny-btn" type="button" data-rps="rock" data-i18n="game4Rock">pedra</button>
+          <button class="tiny-btn" type="button" data-rps="paper" data-i18n="game4Paper">papel</button>
+          <button class="tiny-btn" type="button" data-rps="scissors" data-i18n="game4Scissors">tesoura</button>
+        </div>
+        <p id="rpsResult"></p>
+      </article>
+
+
+      <article class="game-box">
+        <h2 data-i18n="game3Title">adivinhe o número</h2>
+        <p data-i18n="game3Text">adivinhe o número secreto de 1 a 20.</p>
+        <div class="inline-row">
+          <input id="guessInput" class="mini-input" type="number" min="1" max="20"
+            data-i18n-placeholder="game3Placeholder" placeholder="digite o número">
+          <button class="tiny-btn" id="guessBtn" type="button" data-i18n="game3Btn">adivinhar</button>
+        </div>
+        <p id="guessHint"></p>
+      </article>
+
+
+
+      <article class="game-box">
+        <h2 data-i18n="game5Title">mensagem da sorte</h2>
+        <p data-i18n="game5Text">toque para receber uma mensagem carinhosa.</p>
+        <button class="tiny-btn" id="luckyBtn" type="button" data-i18n="game5Btn">mostrar mensagem</button>
+        <p id="luckyText"></p>
+        <video autoplay muted loop playsinline id="secretVideo" width="100%" style="display:none; margin-top:50px; border-radius:12px;">
+          <source src="assets/Video.mp4" type="video/mp4">
+        </video>
+      </article>
+    </section>
+  </main>
+  <footer class="footer" data-i18n="footer">feito com muito amor e pixels rosas.</footer>
+  <script src="app.js"></script>
+</body>
+
+</html>
