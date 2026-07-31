@@ -2,7 +2,7 @@ const translations = {
   en: {
     logo: "Júlia's space",
     name1: "Júlia",
-    name2: "Victor",
+    name2: "Arthur",
     navHome: "home",
     navMeditations: "meditations",
     navAffirmations: "affirmations",
