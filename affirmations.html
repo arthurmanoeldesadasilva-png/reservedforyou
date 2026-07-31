@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,35 +10,37 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <div class="pixel-stars"></div>
   <header class="site-header">
-  <nav class="nav">
-    <a class="logo" href="index.html" data-i18n="logo">espaço da Júlia</a>
-    <div class="nav-links">
-      <a href="index.html"  data-i18n="navHome">início</a>
-      <a href="meditations.html"  data-i18n="navMeditations">meditações</a>
-      <a href="affirmations.html" class="active" data-i18n="navAffirmations">afirmações</a>
-      <a href="games.html"  data-i18n="navGames">jogos</a>
-    </div>
-    <div class="lang-wrap">
-      <label for="langSelect" data-i18n="langLabel">idioma</label>
-      <select id="langSelect" aria-label="seletor de idioma">
-        <option value="en">english</option>
-        <option value="pt">português</option>
-      </select>
-      <label for="soundSelect" data-i18n="soundLabel">som</label>
-      <select id="soundSelect" class="sound-select" aria-label="tipo de som ambiente">
-        <option value="ambient" data-i18n="soundAmbient">Mafia</option>
-        <option value="rain" data-i18n="soundRain">Tranquilo Demais! 😶‍🌫️</option>
-        <option value="fire" data-i18n="soundFire">Sei lá</option>
-        <option value="wind" data-i18n="soundWind">You are Amazing</option>
-        <option value="trees" data-i18n="soundTrees">Júlia?!!🤨</option>
-      </select>
-      <button id="audioToggle" class="audio-btn" type="button" data-i18n="audioToggleOff">som ambiente desligado</button>
-    </div>
-  </nav>
-</header>
+    <nav class="nav">
+      <a class="logo" href="index.html" data-i18n="logo">espaço da Júlia</a>
+      <div class="nav-links">
+        <a href="index.html" data-i18n="navHome">início</a>
+        <a href="meditations.html" data-i18n="navMeditations">meditações</a>
+        <a href="affirmations.html" class="active" data-i18n="navAffirmations">afirmações</a>
+        <a href="games.html" data-i18n="navGames">jogos</a>
+      </div>
+      <div class="lang-wrap">
+        <label for="langSelect" data-i18n="langLabel">idioma</label>
+        <select id="langSelect" aria-label="seletor de idioma">
+          <option value="en">english</option>
+          <option value="pt">português</option>
+        </select>
+        <label for="soundSelect" data-i18n="soundLabel">som</label>
+        <select id="soundSelect" class="sound-select" aria-label="tipo de som ambiente">
+          <option value="ambient" data-i18n="soundAmbient">Mafia</option>
+          <option value="rain" data-i18n="soundRain">Tranquilo Demais! 😶‍🌫️</option>
+          <option value="fire" data-i18n="soundFire">Sei lá</option>
+          <option value="wind" data-i18n="soundWind">You are Amazing</option>
+          <option value="trees" data-i18n="soundTrees">Júlia?!!🤨</option>
+        </select>
+        <button id="audioToggle" class="audio-btn" type="button" data-i18n="audioToggleOff">som ambiente
+          desligado</button>
+      </div>
+    </nav>
+  </header>
   <main>
     <section class="hero">
       <h1 data-i18n="affTitle">afirmações</h1>
@@ -55,13 +58,14 @@
         </div>
       </div>
     </section>
-   
+
     <section class="affirmation-layout">
       <article class="affirmation-box">
         <h2 data-i18n="affTopicAnxiety">de Victor para você</h2>
         <ul class="affirmation-list">
           <li style="margin-bottom: 5px;" data-i18n="affAnx1">o seu bem-estar importa muito para mim.</li>
-          <li style="margin-bottom: 5px;" data-i18n="affAnx2">estou aqui para o que você precisar, em todos os momentos.</li>
+          <li style="margin-bottom: 5px;" data-i18n="affAnx2">estou aqui para o que você precisar, em todos os momentos.
+          </li>
           <li style="margin-bottom: 5px;" data-i18n="affAnx3">o mundo é um lugar mais bonito com você nele.</li>
           <li style="margin-bottom: 5px;" data-i18n="affAnx4">espero que, quando você ler isso, esteja sorrindo😊</li>
         </ul>
@@ -81,6 +85,17 @@
           <li data-i18n="affSelf4">eu mereço coisas suaves e bonitas.</li>
         </ul>
       </article>
+
+      </article>
+      <article class="affirmation-box">
+        <h2 data-i18n="affTopicMoney">money & abundance</h2>
+        <ul class="affirmation-list">
+          <li data-i18n="affMoney1">money flows to me in calm and aligned ways.</li>
+          <li data-i18n="affMoney2">i am open to abundance every day.</li>
+          <li data-i18n="affMoney3">i deserve financial stability and ease.</li>
+          <li data-i18n="affMoney4">new opportunities find me at the right time.</li>
+        </ul>
+      </article>
       
       <article class="affirmation-box">
         <h2 data-i18n="affTopicHealth">Manual da Júlia</h2>
@@ -96,4 +111,5 @@
   <footer class="footer" data-i18n="footer">feito com amor e pixels rosas.</footer>
   <script src="app.js"></script>
 </body>
+
 </html>

@@ -126,17 +126,52 @@
         <p id="guessHint"></p>
       </article>
 
+      <article class="game-box">
+        <h2 data-i18n="game9Title">kitty reflex</h2>
+        <p data-i18n="game9Text">tap the kitty as soon as she appears.</p>
+        <button class="tiny-btn" id="reflexStart" type="button" data-i18n="game9Start">start reflex</button>
+        <p><span data-i18n="game9Best">best</span>: <span id="reflexBest">-</span> ms</p>
+        <p id="reflexStatus" data-i18n="game9Ready">wait for kitty...</p>
+        <button class="tap-burst-btn" id="reflexTap" type="button" disabled>
+          <img id="reflexIcon" src="assets/pixel-heart.svg" alt="pixel reflex icon">
+        </button>
+      </article>
 
+      <article class="game-box">
+        <h2 data-i18n="game1Title">calm click</h2>
+        <p data-i18n="game1Text">click to fill the calm meter before time ends.</p>
+        <div class="inline-row">
+          <label for="calmSetTime" data-i18n="game1SetTime">set time</label>
+          <input id="calmSetTime" class="mini-input" type="number" min="2" max="60" value="10">
+        </div>
+        <button class="tiny-btn" id="startCalmClick" type="button" data-i18n="game1Btn">start round</button>
+        <p><span data-i18n="game1Score">score</span>: <span id="calmScore">0</span></p>
+        <p><span data-i18n="game1Time">time</span>: <span id="calmTime">10</span></p>
+        <div class="meter">
+          <div class="meter-fill" id="meterFill"></div>
+        </div>
+      </article>
+      
+      <article class="game-box">
+        <h2 data-i18n="game6Title">speed tap</h2>
+        <p data-i18n="game6Text">tap as fast as you can in 10 seconds.</p>
+        <button class="tiny-btn" id="speedTapBtn" type="button" data-i18n="game6Btn">start 10s</button>
+        <p><span data-i18n="game6Taps">taps</span>: <span id="speedTapCount">0</span></p>
+        <p><span data-i18n="game6Time">time</span>: <span id="speedTapTime">10</span></p>
+        <button class="tap-burst-btn" id="speedTapArea" type="button" data-i18n="game6TapBtn">tap me</button>
+      </article>
 
       <article class="game-box">
         <h2 data-i18n="game5Title">mensagem da sorte</h2>
         <p data-i18n="game5Text">toque para receber uma mensagem carinhosa.</p>
         <button class="tiny-btn" id="luckyBtn" type="button" data-i18n="game5Btn">mostrar mensagem</button>
         <p id="luckyText"></p>
-        <video autoplay muted loop playsinline id="secretVideo" width="100%" style="display:none; margin-top:50px; border-radius:12px;">
+        <video autoplay muted loop playsinline id="secretVideo" width="100%"
+          style="display:none; margin-top:50px; border-radius:12px;">
           <source src="assets/Video.mp4" type="video/mp4">
         </video>
       </article>
+
     </section>
   </main>
   <footer class="footer" data-i18n="footer">feito com muito amor e pixels rosas.</footer>

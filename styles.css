@@ -1,10 +1,11 @@
 :root {
-  --pink-1: #ffd6ec;
-  --pink-2: #ffc1e1;
-  --pink-3: #ff9ecf;
-  --pink-4: #ff7fc0;
-  --berry: #8d3b73;
-  --card: rgba(255, 255, 255, 0.65);
+  --pink-1: #ffd1e8;
+  --pink-2: #ffb3d9;
+  --pink-3: #ff80bf;
+  --pink-4: #ff4da6;
+  --berry: #b30059;
+  --text: #4d0026;
+  --card: rgba(255, 255, 255, 0.75);
 }
 
 * {
@@ -15,9 +16,9 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: "Press Start 2P", monospace;
-  color: #4e2a42;
+  color: var(--text);
   text-transform: lowercase;
-  background: linear-gradient(-45deg, var(--pink-1), var(--pink-2), var(--pink-3), #ffdff1);
+  background: linear-gradient(-45deg, var(--pink-1), var(--pink-2), var(--pink-3), #fff0f5);
   background-size: 400% 400%;
   animation: dreamyGradient 24s ease infinite;
 }
@@ -41,9 +42,9 @@ body {
   opacity: 0.35;
   background-image:
     radial-gradient(circle at 10% 20%, #fff 0 3px, transparent 4px),
-    radial-gradient(circle at 80% 15%, #ffeaf7 0 2px, transparent 3px),
+    radial-gradient(circle at 80% 15%, #ffe6f2 0 2px, transparent 3px),
     radial-gradient(circle at 70% 80%, #fff 0 2px, transparent 3px),
-    radial-gradient(circle at 25% 70%, #ffe0f0 0 3px, transparent 4px);
+    radial-gradient(circle at 25% 70%, #ffcce6 0 3px, transparent 4px);
   animation: drift 18s ease-in-out infinite alternate;
 }
 
@@ -60,7 +61,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 5;
-  background: rgba(255, 236, 247, 0.92);
+  background: rgba(255, 240, 245, 0.92);
   border-bottom: 4px solid var(--pink-4);
 }
 
@@ -74,17 +75,17 @@ body {
   gap: 12px;
 }
 
-  .video-area{
-    margin-top:20px;
-    display: flex;
-    justify-content: center;
+.video-area {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
 
-.video-area video{
-    width:230px;
-    height:180px;
-    object-fit:cover;
-    border-radius:12px;
+.video-area video {
+  width: 230px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 .logo {
@@ -101,32 +102,29 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #5c2f4c;
-  background: #ffe5f3;
-  border: 3px solid #f6a3d0;
+  color: var(--text);
+  background: #ffe6f2;
+  border: 3px solid var(--pink-3);
   padding: 9px 11px;
   font-size: 0.53rem;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  background: #ffc7e5;
+  background: var(--pink-2);
 }
 
 .lang-wrap {
   display: flex;
   align-items: center;
-  flex-wrap: wrap; /* Permite que os itens quebrem de linha se não couberem */
-  justify-content: center; /* Centraliza os itens no celular */
-  gap: 6px;
+  gap: 8px;
   font-size: 0.5rem;
-  width: 100%;
 }
 
 .audio-btn {
   border: 2px solid var(--pink-4);
-  background: #ffd8ec;
-  color: #5b2a48;
+  background: var(--pink-1);
+  color: var(--text);
   font-family: inherit;
   font-size: 0.47rem;
   padding: 6px 8px;
@@ -134,15 +132,15 @@ body {
 }
 
 .audio-btn:hover {
-  background: #ffc2e2;
+  background: var(--pink-2);
 }
 
 select {
   font-family: inherit;
   font-size: 0.5rem;
   border: 2px solid var(--pink-4);
-  background: #fff0f8;
-  color: #512943;
+  background: #fff5f9;
+  color: var(--text);
   padding: 5px;
 }
 
@@ -160,8 +158,8 @@ main {
 .video-card,
 .affirmation-box {
   background: var(--card);
-  border: 4px solid #f39eca;
-  box-shadow: 0 0 0 4px #ffd3ea inset;
+  border: 4px solid var(--pink-3);
+  box-shadow: 0 0 0 4px var(--pink-1) inset;
 }
 
 .hero {
@@ -181,21 +179,21 @@ main {
   width: 72px;
   height: 72px;
   image-rendering: pixelated;
-  border: 3px solid #f39eca;
-  background: #ffe8f6;
+  border: 3px solid var(--pink-3);
+  background: #fff0f5;
 }
 
 h1 {
   margin: 0 0 20px;
   font-size: clamp(1rem, 3.4vw, 1.8rem);
   line-height: 1.5;
-  color: #8e3f72;
+  color: var(--berry);
 }
 
 h2 {
   font-size: clamp(0.7rem, 2.2vw, 1rem);
   line-height: 1.5;
-  color: #7f3c67;
+  color: #99004d;
 }
 
 p,
@@ -237,16 +235,16 @@ li {
 
 .video-thumb {
   width: 100%;
-  border: 3px solid #f39eca;
+  border: 3px solid var(--pink-3);
   image-rendering: pixelated;
 }
 
 .watch-btn {
   margin-top: 10px;
   width: 100%;
-  border: 3px solid #f39eca;
-  background: #ffd8ec;
-  color: #5b2a48;
+  border: 3px solid var(--pink-3);
+  background: var(--pink-1);
+  color: var(--text);
   font-family: inherit;
   font-size: 0.5rem;
   padding: 10px;
@@ -254,7 +252,7 @@ li {
 }
 
 .watch-btn:hover {
-  background: #ffc4e2;
+  background: var(--pink-2);
 }
 
 .video-embed {
@@ -281,8 +279,8 @@ li {
   height: 120px;
   margin: 12px auto;
   border-radius: 50%;
-  border: 4px solid #f3a4cd;
-  background: radial-gradient(circle at 30% 30%, #ffeef8, #ffcbe4 70%);
+  border: 4px solid var(--pink-3);
+  background: radial-gradient(circle at 30% 30%, #fff0f5, var(--pink-2) 70%);
   transition: transform 2.4s ease-in-out;
   transform: scale(1);
 }
@@ -311,8 +309,8 @@ li {
 }
 
 .pixel-sticker {
-  background: #ffe5f4;
-  border: 3px solid #f2a0cb;
+  background: #ffe6f2;
+  border: 3px solid var(--pink-3);
   padding: 10px;
   font-size: 0.5rem;
 }
@@ -330,23 +328,23 @@ li {
 .meter {
   width: 100%;
   height: 18px;
-  border: 3px solid #f5a8d0;
-  background: #ffe8f5;
+  border: 3px solid var(--pink-3);
+  background: #fff0f5;
   margin-top: 8px;
 }
 
 .meter-fill {
   height: 100%;
   width: 0;
-  background: linear-gradient(to right, #ffa6d2, #ff7fbe);
+  background: linear-gradient(to right, var(--pink-3), var(--pink-4));
   transition: width 0.2s linear;
 }
 
 .tiny-btn {
   margin-top: 10px;
-  border: 3px solid #f39eca;
-  background: #ffd8ec;
-  color: #5b2a48;
+  border: 3px solid var(--pink-3);
+  background: var(--pink-1);
+  color: var(--text);
   font-family: inherit;
   font-size: 0.5rem;
   padding: 9px;
@@ -363,9 +361,9 @@ li {
 .mini-input {
   font-family: inherit;
   font-size: 0.5rem;
-  border: 3px solid #f39eca;
-  background: #fff1f9;
-  color: #5b2a48;
+  border: 3px solid var(--pink-3);
+  background: #fff5f9;
+  color: var(--text);
   padding: 8px;
   max-width: 170px;
 }
@@ -430,9 +428,9 @@ li {
 .tap-burst-btn {
   margin-top: 10px;
   width: 100%;
-  border: 3px solid #f39eca;
-  background: #ffd8ec;
-  color: #5b2a48;
+  border: 3px solid var(--pink-3);
+  background: var(--pink-1);
+  color: var(--text);
   font-family: inherit;
   font-size: 0.6rem;
   padding: 16px;
@@ -450,8 +448,8 @@ li {
 .runner-track {
   position: relative;
   height: 80px;
-  border: 3px solid #f3a2cc;
-  background: #fff1f8;
+  border: 3px solid var(--pink-3);
+  background: #fff5f9;
   margin-top: 10px;
   overflow: hidden;
 }
@@ -479,17 +477,17 @@ li {
 .petal-box {
   margin-top: 10px;
   height: 120px;
-  border: 3px solid #f3a2cc;
-  background: #fff1f8;
+  border: 3px solid var(--pink-3);
+  background: #fff5f9;
   position: relative;
   overflow: hidden;
 }
 
 .petal-btn {
   position: absolute;
-  border: 2px solid #f39eca;
-  background: #ffd8ec;
-  color: #5b2a48;
+  border: 2px solid var(--pink-3);
+  background: var(--pink-1);
+  color: var(--text);
   font-family: inherit;
   font-size: 0.7rem;
   cursor: pointer;
@@ -515,8 +513,8 @@ li {
 
 .kitty-cell {
   aspect-ratio: 1;
-  border: 3px solid #f39eca;
-  background: #fff4fa;
+  border: 3px solid var(--pink-3);
+  background: #fff0f5;
   cursor: pointer;
   display: grid;
   place-items: center;
@@ -527,7 +525,7 @@ li {
   text-align: center;
   padding: 16px;
   font-size: 0.45rem;
-  color: #7f4268;
+  color: var(--berry);
 }
 
 @media (max-width: 800px) {
